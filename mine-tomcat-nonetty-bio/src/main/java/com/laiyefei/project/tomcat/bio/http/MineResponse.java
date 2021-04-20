@@ -1,5 +1,6 @@
 package com.laiyefei.project.tomcat.bio.http;
 
+import java.io.IOException;
 import java.io.OutputStream;
 
 /**
@@ -18,7 +19,7 @@ public class MineResponse {
         this.os = os;
     }
 
-    public void write(String content) {
-        System.out.println(content);
+    public void write(String content) throws IOException {
+        this.os.write(content.getBytes());
     }
 }
