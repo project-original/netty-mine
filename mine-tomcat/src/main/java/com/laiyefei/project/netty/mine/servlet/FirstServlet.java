@@ -1,8 +1,9 @@
-package com.laiyefei.project.tomcat.bio.servlet;
+package com.laiyefei.project.netty.mine.servlet;
 
-import com.laiyefei.project.tomcat.bio.http.MineRequest;
-import com.laiyefei.project.tomcat.bio.http.MineResponse;
-import com.laiyefei.project.tomcat.bio.http.MineServlet;
+
+import com.laiyefei.project.netty.mine.http.MineRequest;
+import com.laiyefei.project.netty.mine.http.MineResponse;
+import com.laiyefei.project.netty.mine.http.MineServlet;
 
 /**
  * @Author : leaf.fly(?)

@@ -20,6 +20,11 @@ public class MineResponse {
     }
 
     public void write(String content) throws IOException {
-        this.os.write(content.getBytes());
+        final StringBuilder sb = new StringBuilder();
+        sb.append("HTTP/1.1 200 ok\n")
+                .append("Content-Type: text/html\n")
+                .append("\r\n")
+                .append(content);
+        this.os.write(sb.toString().getBytes());
     }
 }

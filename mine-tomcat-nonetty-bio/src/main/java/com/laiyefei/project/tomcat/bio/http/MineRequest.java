@@ -23,8 +23,8 @@ public class MineRequest {
             final String content = getContent();
             final String lineFirst = content.split("\\n")[0];
             final String[] lineFirstArr = lineFirst.split("\\s");
-            this.url = lineFirstArr[0];
-            this.method = lineFirstArr[1];
+            this.url = lineFirstArr[1];
+            this.method = lineFirstArr[0];
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -34,7 +34,7 @@ public class MineRequest {
         String content = "";
         byte[] buff = new byte[1024];
         int len = 0;
-        while (0 < (len = this.is.read(buff))) {
+        if (0 < (len = this.is.read(buff))) {
             content = new String(buff, 0, len);
             System.out.println(content);
         }
